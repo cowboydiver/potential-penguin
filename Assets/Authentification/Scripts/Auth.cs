@@ -214,7 +214,7 @@ public class Auth : MonoBehaviour {
 
         yield return r.Send();
 
-        if (r.isError)
+        if (r.isNetworkError)
         {
             print("error: " + r.error.ToString());
             //something fucked up

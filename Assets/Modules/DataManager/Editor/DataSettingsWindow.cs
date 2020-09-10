@@ -130,7 +130,7 @@ public class SettingsWindow : EditorWindow
             latestModuleVersion = null;
             games = null;
 
-            if (request.isError)
+            if (request.isNetworkError)
             {
                 error = request.error;
             }

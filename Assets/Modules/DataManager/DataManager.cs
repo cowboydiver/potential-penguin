@@ -56,7 +56,7 @@ public class DataManager : Writable
             request.SetRequestHeader("api-key", API_KEY);
             yield return request.Send();
 
-            if (request.isError)
+            if (request.isNetworkError)
                 promise.Reject(new Exception(request.error));
             else
                 promise.Fulfill(request.downloadHandler.text);

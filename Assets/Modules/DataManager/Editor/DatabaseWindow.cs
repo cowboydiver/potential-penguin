@@ -169,7 +169,7 @@ public class DatabaseWindow : EditorWindow
         {
             tables = null;
 
-            if (request.isError)
+            if (request.isNetworkError)
             {
                 error = request.error;
             }
